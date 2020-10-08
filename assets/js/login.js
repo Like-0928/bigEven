@@ -46,7 +46,7 @@ $(function () {
             password: $('#zhuche [name=password]').val()
         }
         $.post(
-            'http://ajax.frontend.itheima.net/api/reguser',
+            '/api/reguser',
             data,
             function (res) {
                 if (res.status !== 0) {
@@ -68,7 +68,7 @@ $(function () {
         e.preventDefault()
         // 2. 发起Ajax的POST请求
         $.ajax({
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: '/api/login',
             method: 'POST',
             // 快速获取表单中的数据
             data: $(this).serialize(),
